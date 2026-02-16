@@ -24,15 +24,19 @@ function portalHTML(c){
 
 /* 일반 카드 */
 function characterHTML(c){
-  const look = (c.appearance || []).slice(0,6).join(" · ");
-  const rel = (c.relation || []).map(r => `${r.type}: ${r.name}`).join(" · ") || "—";
+  const hasImg = c.img && c.img.trim() !== "";
+  const imgStyle = hasImg ? `style="background-image:url('${c.img}')" ` : "";
+  const silClass = hasImg ? "" : "sil";
+
+  const look = (c.appearance || []).slice(0,6).join(" · ") || "—";
+  const rel  = (c.relation || []).map(r => `${r.type}: ${r.name}`).join(" · ") || "—";
 
   return `
   <article class="card ${c.id}">
     <div class="cardInner">
 
       <div class="face front">
-        <div class="portrait sil"></div>
+        <div class="portrait ${silClass}" ${imgStyle}></div>
         <h3>${c.name}</h3>
         <span class="badge">${c.job}</span>
         <p>${c.faction} · ${c.vibe}</p>
@@ -60,7 +64,7 @@ grid.addEventListener("click", (e)=>{
   if(!card) return;
 
   if(card.classList.contains("portal")){
-    const url = card.dataset.link;
+    const url = (card.dataset.link || "").trim();
     if(!url){
       alert("characters.js에 url을 입력하세요.");
       return;
@@ -75,4 +79,5 @@ grid.addEventListener("click", (e)=>{
 
   card.classList.toggle("is-flipped");
 });
+
 
