@@ -21,7 +21,7 @@ window.CHARACTERS = [
     relation: [{ name: "백야(白夜)", type: "쌍둥이 동생" }],
     past: "선천적으로 눈이 없던 백야에게 눈을 나눠줌(백야는 모름).",
     tags: ["기록","판정","책무","봉인","경계"],
-    img: ""
+    img: "images/ch/muyang.png"
   },
 
   {
@@ -45,7 +45,7 @@ window.CHARACTERS = [
     relation: [{ name: "무영(無影)", type: "쌍둥이 형" }],
     past: "형 무영에게 눈을 나눠받음(본인은 모름).",
     tags: ["집행","유희","자극","심문","경계"],
-    img: ""
+    img: "images/ch/baekya.png"
   },
 
   {
@@ -70,7 +70,7 @@ window.CHARACTERS = [
     relation: [{ name: "란휘(瀾暉)", type: "티격태격(사이 나쁨 X)" }],
     past: "아주 과거 인간 여성을 사랑했으나 그 인간은 윤회를 택함 → 인간혐오 생김.",
     tags: ["교룡","변신","바다","냉소","경계"],
-    img: ""
+    img: "images/ch/haerang.png"
   },
 
   {
@@ -94,7 +94,7 @@ window.CHARACTERS = [
     relation: [],
     past: "불을 가지고 장난치다 죽을 뻔해 불을 무서워함.",
     tags: ["철","온기","변화","불","경계"],
-    img: ""
+    img: "images/ch/sanghwa.png"
   },
 
   {
@@ -118,7 +118,7 @@ window.CHARACTERS = [
     relation: [{ name: "해랑(海浪)", type: "티격태격(사이 나쁨 X)" }],
     past: "",
     tags: ["텐구","비행","술","도발","경계"],
-    img: ""
+    img: "images/ch/ranhwi.png"
   },
 
   /* 6번째 카드: 황화 바로가기 */
@@ -126,7 +126,8 @@ window.CHARACTERS = [
     id: "hwanghwa_portal",
     type: "link",
     name: "황화 바로가기",
-    url: ""  // https://crack.wrtn.ai/detail/698b8940a70018757b829524
+    url: "ttps://crack.wrtn.ai/detail/698b8940a70018757b829524"  // 
   }
 
 ];
+
