@@ -5,11 +5,13 @@
   --glass:rgba(12,10,18,.6);
 }
 
+/* ===== 기본 ===== */
 body{
   margin:0;
   color:var(--ink);
   font-family: ui-serif, "Noto Serif KR", serif;
 
+  /* 🔥 배경 이미지 */
   background:
     linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
     url("images/bg.jpg") center/cover no-repeat fixed;
@@ -17,7 +19,7 @@ body{
   overflow-x:hidden;
 }
 
-/* 🌕 달 */
+/* ===== 움직이는 달 ===== */
 .moon{
   position:fixed;
   top:7%;
@@ -36,12 +38,28 @@ body{
   100%{transform:translateY(0px);}
 }
 
-/* 헤더 */
+/* ===== 헤더 ===== */
 .hero{
   text-align:center;
   padding:60px 20px;
 }
 
+.sigil{
+  display:inline-grid;
+  place-items:center;
+  width:54px;
+  height:54px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  margin-bottom:10px;
+}
+
+.sub{
+  color:var(--muted);
+}
+
+/* ===== 전체 영역 ===== */
 .wrap{
   max-width:1100px;
   margin:auto;
@@ -56,7 +74,7 @@ body{
   backdrop-filter:blur(8px);
 }
 
-/* 🔥 3x2 고정 */
+/* ===== 3x2 고정 ===== */
 .grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -65,7 +83,7 @@ body{
   margin-top:20px;
 }
 
-/* 카드 */
+/* ===== 카드 ===== */
 .card{
   perspective:1200px;
   height:380px;
@@ -83,16 +101,18 @@ body{
   transform:rotateY(180deg);
 }
 
+/* ===== 카드 공통 ===== */
 .face{
   position:absolute;
   inset:0;
   border-radius:16px;
   border:1px solid rgba(255,255,255,.1);
-  background:rgba(20,20,30,.9);
+  background:rgba(20,20,30,.92);
   backface-visibility:hidden;
   padding:14px;
 }
 
+/* ===== 앞면 ===== */
 .front{
   display:flex;
   flex-direction:column;
@@ -101,8 +121,10 @@ body{
 .portrait{
   height:60%;
   background:#111;
-  background-size:cover;
+  background-size:cover;     /* 🔥 이미지 제대로 보이게 */
   background-position:center;
+  border-radius:10px;
+  margin-bottom:12px;
 }
 
 .portrait.sil{
@@ -115,8 +137,26 @@ body{
   border-radius:999px;
   background:rgba(255,255,255,.05);
   border:1px solid rgba(255,255,255,.1);
+  display:inline-block;
+  margin:6px 0;
 }
 
+/* ===== 뒷면 ===== */
 .back{
   transform:rotateY(180deg);
+  overflow-y:auto;
+}
+
+/* ===== 포털 카드 ===== */
+.portal .badge{
+  border-color:rgba(100,160,255,.4);
+  background:rgba(100,160,255,.15);
+}
+
+/* ===== 스크롤 숨기기 (선택) ===== */
+.back::-webkit-scrollbar{
+  width:4px;
+}
+.back::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,.2);
 }
