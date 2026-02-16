@@ -126,6 +126,7 @@ window.CHARACTERS = [
     id: "hwanghwa_portal",
     type: "link",
     name: "황화 바로가기",
-    url: ""  // 나중에 여기만 채우면 클릭 즉시 이동
+    url: ""  // https://crack.wrtn.ai/detail/698b8940a70018757b829524
   }
+
 ];
