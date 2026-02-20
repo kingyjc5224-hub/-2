@@ -18,7 +18,7 @@ window.CHARACTERS = [
       "후천적으로 한쪽 눈 상실"
     ],
     relation: [{ name: "백야(白夜)", type: "쌍둥이 동생" }],
-    past: "선천적으로 눈이 없던 백야에게 눈을 나눠줌(백야 모름).","인간 모친",
+    past: "선천적으로 눈이 없던 백야에게 눈을 나눠줌(백야 모름). / 인간 모친",
     tags: ["기록","판정","책무","봉인","경계"],
     img: "images/ch/muyang.png"
   },
@@ -41,7 +41,7 @@ window.CHARACTERS = [
       "키 215cm"
     ],
     relation: [{ name: "무영(無影)", type: "쌍둥이 형" }],
-    past: "형 무영에게 눈을 나눠받음(본인 모름).","인간 모친",
+    past: "형 무영에게 눈을 나눠받음(본인 모름). / 인간 모친",
     tags: ["집행","유희","자극","심문","경계"],
     img: "images/ch/baekya.png"
   },
@@ -89,7 +89,7 @@ window.CHARACTERS = [
       "키 160~220cm(상태에 따라 변함)",
       "몸이 뜨거움"
     ],
-    relation: [{ type: "다섯 영물中 가장 어린 것으로 추정" }],
+    relation: [{ name: "", type: "다섯 영물 중 가장 어린 것으로 추정" }],
     past: "불을 무서워함.",
     tags: ["철","온기","변화","불","경계"],
     img: "images/ch/sanghwa.png"
@@ -119,15 +119,11 @@ window.CHARACTERS = [
     img: "images/ch/ranhwi.png"
   },
 
-  /* 6번째 카드: 황화 바로가기 */
   {
     id: "hwanghwa_portal",
     type: "link",
     name: "황화 바로가기",
-    url: "https://share.crack.wrtn.ai/r0xfx9"  // 
+    url: "https://share.crack.wrtn.ai/r0xfx9"
   }
-
 ];
-
-
 
