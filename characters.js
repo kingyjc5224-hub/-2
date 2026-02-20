@@ -89,7 +89,8 @@ window.CHARACTERS = [
       "키 160~220cm(상태에 따라 변함)",
       "몸이 뜨거움"
     ],
-    relation: [{ name: "", type: "다섯 영물 중 가장 어린 것으로 추정" }],
+    // name 없이 type만 있는 관계도 ui.js에서 안전 처리됨
+    relation: [{ type: "다섯 영물 중 가장 어린 것으로 추정" }],
     past: "불을 무서워함.",
     tags: ["철","온기","변화","불","경계"],
     img: "images/ch/sanghwa.png"
@@ -119,6 +120,7 @@ window.CHARACTERS = [
     img: "images/ch/ranhwi.png"
   },
 
+  /* 6번째 카드: 황화 바로가기 */
   {
     id: "hwanghwa_portal",
     type: "link",
@@ -126,4 +128,3 @@ window.CHARACTERS = [
     url: "https://share.crack.wrtn.ai/r0xfx9"
   }
 ];
-
