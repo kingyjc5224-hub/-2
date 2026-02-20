@@ -19,6 +19,41 @@ body{
   overflow-x:hidden;
 }
 
+/* ===== 입장 오버레이 ===== */
+.enterOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(6px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  transition:opacity 1.2s ease;
+}
+.enterBox{
+  text-align:center;
+  color:var(--ink);
+  animation:fadePulse 3s ease-in-out infinite;
+  padding:20px 18px;
+}
+.enterText{
+  font-size:24px;
+  letter-spacing:3px;
+  margin:0 0 14px;
+}
+.enterSub{
+  font-size:13px;
+  color:#999;
+  letter-spacing:1px;
+  margin:0;
+}
+@keyframes fadePulse{
+  0%{opacity:.55;}
+  50%{opacity:1;}
+  100%{opacity:.55;}
+}
+
 /* ===== 움직이는 달 ===== */
 .moon{
   position:fixed;
@@ -42,6 +77,8 @@ body{
 .hero{
   text-align:center;
   padding:60px 20px;
+  position:relative;
+  z-index:2;
 }
 
 .sigil{
@@ -52,7 +89,7 @@ body{
   border:1px solid var(--line);
   border-radius:12px;
   background:rgba(255,255,255,.05);
-  margin-bottom:10px;
+  margin:0 auto 10px;
 }
 
 .sub{
@@ -64,6 +101,8 @@ body{
   max-width:1100px;
   margin:auto;
   padding:20px;
+  position:relative;
+  z-index:2;
 }
 
 .panel{
@@ -72,6 +111,19 @@ body{
   border-radius:18px;
   background:var(--glass);
   backdrop-filter:blur(8px);
+}
+
+/* panelHead(네 코드에 있는데 스타일이 없어서 추가) */
+.panelHead{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+}
+.hint{
+  margin:0;
+  color:rgba(184,176,160,.9);
+  font-size:13px;
 }
 
 /* ===== 3x2 고정 ===== */
@@ -121,7 +173,7 @@ body{
 .portrait{
   height:60%;
   background:#111;
-  background-size:cover;     /* 🔥 이미지 제대로 보이게 */
+  background-size:cover;     /* ✅ 이미지 제대로 보이게 */
   background-position:center;
   border-radius:10px;
   margin-bottom:12px;
@@ -153,7 +205,7 @@ body{
   background:rgba(100,160,255,.15);
 }
 
-/* ===== 스크롤 숨기기 (선택) ===== */
+/* ===== 스크롤 (선택) ===== */
 .back::-webkit-scrollbar{
   width:4px;
 }
