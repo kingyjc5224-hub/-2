@@ -2,24 +2,23 @@ window.CHARACTERS = [
   {
     id: "muyang",
     name: "무영(無影)",
-    faction: "황화",
-    job: "기록·판단 사자",
+    faction: "황화 북쪽",
+    job: "업보 판단 사자(使者)",
     vibe: "침묵 · 이성 · 효율",
     age: "불명",
     gender: "♂",
     height: "217cm",
-    personality: ["ISTJ","침묵","관찰","섬세","책임감","감정변화 적음"],
+    personality: ["ISTJ","침묵","관찰","감정변화 적음"],
     appearance: [
       "밝은 피부",
       "흑발 매우 긴 장발",
-      "흑안",
       "눈을 가린 하얀 천",
       "근육질 체형",
       "키 217cm",
       "후천적으로 한쪽 눈 상실"
     ],
     relation: [{ name: "백야(白夜)", type: "쌍둥이 동생" }],
-    past: "선천적으로 눈이 없던 백야에게 눈을 나눠줌(백야는 모름).",
+    past: "선천적으로 눈이 없던 백야에게 눈을 나눠줌(백야 모름).","인간 모친",
     tags: ["기록","판정","책무","봉인","경계"],
     img: "images/ch/muyang.png"
   },
@@ -27,23 +26,22 @@ window.CHARACTERS = [
   {
     id: "baekya",
     name: "백야(白夜)",
-    faction: "황화",
-    job: "집행 사자",
-    vibe: "능글 · 블랙코미디 · 자극",
+    faction: "황화 북쪽",
+    job: "최종집행 사자(使者)",
+    vibe: "능글 · 발칙 · 자극",
     age: "불명",
     gender: "♂",
     height: "215cm",
-    personality: ["ESTP","호기심","능글","발칙","노련","농염"],
+    personality: ["ESTP","자극추구","능글","노련","농염"],
     appearance: [
       "밝은 피부",
       "새하얀 매우 긴 장발",
-      "흑안",
       "눈을 가린 검은 천",
       "근육질 체형",
       "키 215cm"
     ],
     relation: [{ name: "무영(無影)", type: "쌍둥이 형" }],
-    past: "형 무영에게 눈을 나눠받음(본인은 모름).",
+    past: "형 무영에게 눈을 나눠받음(본인 모름).","인간 모친",
     tags: ["집행","유희","자극","심문","경계"],
     img: "images/ch/baekya.png"
   },
@@ -51,23 +49,23 @@ window.CHARACTERS = [
   {
     id: "haerang",
     name: "해랑(海浪)",
-    faction: "황화",
-    job: "푸른 교룡",
+    faction: "황화 서쪽",
+    job: "푸른 교룡(蛟龍)",
     vibe: "냉소 · 독설 · 성숙",
     age: "불명",
     gender: "♂",
     height: "187cm",
-    personality: ["INT(F)P","내향","차가움","시니컬","독설","무관심"],
+    personality: ["INTP","내향","차가움","시니컬","독설","무관심"],
     appearance: [
       "밝은 피부",
-      "남색 칼단발 + 일자 앞머리",
+      "남색 칼단발",
       "푸른 눈",
       "눈밑 점",
       "남색 차이나 드레스",
       "마른 근육",
       "키 187cm"
     ],
-    relation: [{ name: "란휘(瀾暉)", type: "티격태격(사이 나쁨 X)" }],
+    relation: [{ name: "란휘(瀾暉)", type: "티격태격" }],
     past: "아주 과거 인간 여성을 사랑했으나 그 인간은 윤회를 택함 → 인간혐오 생김.",
     tags: ["교룡","변신","바다","냉소","경계"],
     img: "images/ch/haerang.png"
@@ -76,13 +74,13 @@ window.CHARACTERS = [
   {
     id: "sanghwa",
     name: "상화(象火)",
-    faction: "황화",
+    faction: "황화 남쪽",
     job: "불가사리(不可殺伊)",
-    vibe: "다정 · 애교 (조건부 성숙)",
+    vibe: "다정 · 애교",
     age: "불명",
     gender: "♂",
     height: "160~220cm",
-    personality: ["ES(N)FP","다정","애교","친화","사교","조건부 성숙"],
+    personality: ["ENFP","다정","애교","친화","사교","조건부 성숙"],
     appearance: [
       "밝은 피부",
       "흑발 짧은 머리",
@@ -91,8 +89,8 @@ window.CHARACTERS = [
       "키 160~220cm(상태에 따라 변함)",
       "몸이 뜨거움"
     ],
-    relation: [],
-    past: "불을 가지고 장난치다 죽을 뻔해 불을 무서워함.",
+    relation: [{ type: "다섯 영물中 가장 어린 것으로 추정" }],
+    past: "불을 무서워함.",
     tags: ["철","온기","변화","불","경계"],
     img: "images/ch/sanghwa.png"
   },
@@ -100,13 +98,13 @@ window.CHARACTERS = [
   {
     id: "ranhwi",
     name: "란휘(瀾暉)",
-    faction: "황화",
-    job: "텐구",
-    vibe: "도발 · 탐미 · 츤데레",
+    faction: "황화 동쪽",
+    job: "텐구(天狗)",
+    vibe: "도발 · 승부욕 · 자기애",
     age: "불명",
     gender: "♂",
     height: "185cm",
-    personality: ["ES(N)TJ","외향","자기애","과시","승부욕","직설","탐미"],
+    personality: ["ESTJ","외향","츤데레","과시","직설","탐미"],
     appearance: [
       "밝은 피부",
       "긴 갈색머리 하나로 묶음",
@@ -115,8 +113,8 @@ window.CHARACTERS = [
       "키 185cm",
       "검은 날개(비행)"
     ],
-    relation: [{ name: "해랑(海浪)", type: "티격태격(사이 나쁨 X)" }],
-    past: "",
+    relation: [{ name: "해랑(海浪)", type: "티격태격" }],
+    past: "인간과 술을 좋아함",
     tags: ["텐구","비행","술","도발","경계"],
     img: "images/ch/ranhwi.png"
   },
@@ -130,5 +128,6 @@ window.CHARACTERS = [
   }
 
 ];
+
 
 
