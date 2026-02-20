@@ -1,3 +1,46 @@
+/* =========================
+   0) 입장 오버레이 + BGM 페이드인
+========================= */
+const bgm = document.getElementById("bgm");
+const overlay = document.getElementById("enterOverlay");
+
+function fadeInAudio(targetVolume = 0.6, duration = 3000){
+  if(!bgm) return;
+
+  bgm.muted = false;
+  bgm.volume = 0;
+
+  const stepTime = 50;
+  const steps = Math.max(1, Math.floor(duration / stepTime));
+  const volumeStep = targetVolume / steps;
+
+  let currentStep = 0;
+  const fade = setInterval(() => {
+    currentStep++;
+    bgm.volume = Math.min(targetVolume, bgm.volume + volumeStep);
+
+    if(currentStep >= steps){
+      bgm.volume = targetVolume;
+      clearInterval(fade);
+    }
+  }, stepTime);
+}
+
+if (bgm && overlay) {
+  document.addEventListener("click", () => {
+    fadeInAudio(0.6, 3000);
+
+    overlay.style.opacity = "0";
+    setTimeout(() => {
+      overlay.style.display = "none";
+      overlay.setAttribute("aria-hidden", "true");
+    }, 1200);
+  }, { once: true });
+}
+
+/* =========================
+   1) 카드 렌더링
+========================= */
 const grid = document.getElementById("grid");
 
 /* 포털 카드 */
@@ -29,7 +72,17 @@ function characterHTML(c){
   const silClass = hasImg ? "" : "sil";
 
   const look = (c.appearance || []).slice(0,6).join(" · ") || "—";
-  const rel  = (c.relation || []).map(r => `${r.type}: ${r.name}`).join(" · ") || "—";
+
+  // ✅ relation이 name 없는 형태여도 안전하게 처리
+  const rel = (c.relation || [])
+    .map(r => {
+      const t = (r && r.type) ? String(r.type) : "";
+      const n = (r && r.name) ? String(r.name) : "";
+      if(t && n) return `${t}: ${n}`;
+      return t || n;
+    })
+    .filter(Boolean)
+    .join(" · ") || "—";
 
   return `
   <article class="card ${c.id}">
@@ -59,25 +112,33 @@ grid.innerHTML = window.CHARACTERS.map(c=>{
   return characterHTML(c);
 }).join("");
 
+/* =========================
+   2) 클릭 이벤트 (포털 이동 + 카드 뒤집기)
+========================= */
 grid.addEventListener("click", (e)=>{
   const card = e.target.closest(".card");
   if(!card) return;
 
+  // 포털 카드면 즉시 이동
   if(card.classList.contains("portal")){
     const url = (card.dataset.link || "").trim();
+
     if(!url){
       alert("characters.js에 url을 입력하세요.");
       return;
     }
-    window.location.href = url;
+    if(!/^https?:\/\//i.test(url)){
+      alert("url은 https:// 로 시작해야 해요.\n예) https://example.com");
+      return;
+    }
+
+    window.location.assign(url);
     return;
   }
 
+  // 일반 카드 뒤집기(한 장만)
   document.querySelectorAll(".card.is-flipped").forEach(x=>{
     if(x !== card) x.classList.remove("is-flipped");
   });
-
   card.classList.toggle("is-flipped");
 });
-
-
