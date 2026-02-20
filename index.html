@@ -1,33 +1,45 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>황화 경계록</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>황화 경계록</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- 🌕 달 -->
-<div class="moon"></div>
+  <!-- 🎵 BGM (무음 자동재생 → 첫 클릭에 페이드인) -->
+  <audio id="bgm" src="sounds/theme.mp3" autoplay muted loop preload="auto"></audio>
 
-<header class="hero">
-  <p class="sigil">境</p>
-  <h1>황화 경계록</h1>
-  <p class="sub">이승과 저승 사이, 이름이 남는 곳</p>
-</header>
-
-<main class="wrap">
-  <section class="panel">
-    <div class="panelHead">
-      <h2>인물록</h2>
-      <p class="hint">카드를 눌러 기록을 펼치십시오.</p>
+  <!-- 🌫 입장 오버레이 -->
+  <div id="enterOverlay" class="enterOverlay" aria-hidden="false">
+    <div class="enterBox">
+      <p class="enterText">「영혼의 기록소에 입장하시겠습니까」</p>
+      <p class="enterSub">화면을 한 번 눌러 경계를 통과하십시오</p>
     </div>
-    <div id="grid" class="grid"></div>
-  </section>
-</main>
+  </div>
 
-<script src="characters.js"></script>
-<script src="ui.js"></script>
+  <!-- 🌕 달 -->
+  <div class="moon" aria-hidden="true"></div>
+
+  <header class="hero">
+    <p class="sigil">境</p>
+    <h1>황화 경계록</h1>
+    <p class="sub">이승과 저승 사이, 이름이 남는 곳</p>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <div class="panelHead">
+        <h2>인물록</h2>
+        <p class="hint">카드를 눌러 기록을 펼치십시오.</p>
+      </div>
+
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="characters.js"></script>
+  <script src="ui.js"></script>
 </body>
 </html>
