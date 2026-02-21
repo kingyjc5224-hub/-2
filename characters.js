@@ -54,7 +54,7 @@ window.CHARACTERS = [
     vibe: "냉소 · 독설 · 성숙",
     age: "불명",
     gender: "♂",
-    height: "187cm",
+    height: "185cm",
     personality: ["INTP","내향","차가움","시니컬","독설","무관심"],
     appearance: [
       "밝은 피부",
@@ -63,7 +63,7 @@ window.CHARACTERS = [
       "눈밑 점",
       "남색 차이나 드레스",
       "마른 근육",
-      "키 187cm"
+      "키 185cm"
     ],
     relation: [{ name: "란휘(瀾暉)", type: "티격태격" }],
     past: "아주 과거 인간 여성을 사랑했으나 그 인간은 윤회를 택함 → 인간혐오 생김.",
@@ -104,18 +104,18 @@ window.CHARACTERS = [
     vibe: "도발 · 승부욕 · 자기애",
     age: "불명",
     gender: "♂",
-    height: "185cm",
+    height: "187cm",
     personality: ["ESTJ","외향","츤데레","과시","직설","탐미"],
     appearance: [
       "밝은 피부",
       "긴 갈색머리 하나로 묶음",
       "보라색 눈",
       "적당한 근육",
-      "키 185cm",
+      "키 187cm",
       "검은 날개(비행)"
     ],
     relation: [{ name: "해랑(海浪)", type: "티격태격" }],
-    past: "인간과 술을 좋아함",
+    past: "인간과 술을 좋아함. / 죽은 전연인 존재",
     tags: ["텐구","비행","술","도발","경계"],
     img: "images/ch/ranhwi.png"
   },
@@ -128,3 +128,4 @@ window.CHARACTERS = [
     url: "https://share.crack.wrtn.ai/r0xfx9"
   }
 ];
+
